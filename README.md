@@ -8,7 +8,7 @@ A common technique to load pages with new items. A various callbacks will give y
 MIT licensed 
 
 ### Demo
-  http://bighostkim.github.com/pageless-scroll.html
+  http://bighostkim.github.com/pageless-scroll/
 
 ### Usage:
 
