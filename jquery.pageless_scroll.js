@@ -83,14 +83,15 @@
         throw "element is not scrollable, need to have overflow:scroll or equivalent";
     }
 
+    var that = this;
     $(this).unbind("scroll").bind("scroll", function() {
       var closeToBottom = ( this.scrollHeight - $(this).height() < $(this).scrollTop() + options.bottomDistance );
       var cancel = options.cancelSend.apply(this);
 
       if ([LOADING, ALL_DONE, ERROR].indexOf(this.ajaxStatus) >= 0 || cancel == true) {
       } else if ( closeToBottom ) {
-        loadData.apply(this, [this.sequence]);
-        this.sequence++;
+        loadData.apply(this, [that.sequence]);
+        that.sequence++;
       }
     });
   };
